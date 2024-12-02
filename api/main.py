@@ -7,6 +7,9 @@ from . import schemas
 
 
 app = FastAPI()
+@app.get("/")
+def root(): 
+    return "hello"
 
 
 
