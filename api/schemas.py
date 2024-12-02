@@ -18,10 +18,10 @@ class StudentInfo(Student):
 
 
 class AddressUpdateInfo(BaseModel):
-    city: Optional[str] = None
-    country: Optional[str] = None
+    city: Optional[Annotated[str, Field(min_length=1)]] = None
+    country: Optional[Annotated[str, Field(min_length=1)]] = None
 
 class StudentUpdateInfo(BaseModel):
-    name: Optional[str] = None
-    age: Optional[int] = None
+    name: Optional[Annotated[str, Field(min_length=1)]] = None
+    age: Optional[Annotated[int, Field(gt=0, lte=100)]] = None
     address: Optional[AddressUpdateInfo] = None

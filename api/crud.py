@@ -37,7 +37,7 @@ async def fetch_one_student(id: str) -> schemas.StudentInfo | None:
 
 async def update_student(id: str, info: schemas.StudentUpdateInfo) -> schemas.Student | None:
     required_updates = info.model_dump(exclude_none=True)
-    print(required_updates)
+    # print(required_updates)
 
     result = await students_collection.update_one(
         {"_id": ObjectId(id)}, {"$set": required_updates}
