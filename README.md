@@ -60,17 +60,6 @@ project/
 
 ---
 
-## **Endpoints**
-
-| **HTTP Method** | **Endpoint**         | **Description**          |
-|------------------|----------------------|--------------------------|
-| GET              | `/users/{user_id}`  | Get user details         |
-| POST             | `/users`           | Create a new user        |
-| PUT              | `/users/{user_id}`  | Update user details      |
-| DELETE           | `/users/{user_id}`  | Delete a user            |
-
----
-
 
 
 ## **Deployment**
